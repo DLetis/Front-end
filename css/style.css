@@ -1,18 +1,24 @@
 *{padding: 0; margin: 0;}
+body {background-color: #fff;
+    /*background: linear-gradient(to top, rgba(243, 222, 130, 0.5), rgba(243,222,130,0.5)), url(../images/fon.jpg) no-repeat center center fixed;
+    background-size: cover;*/}
 h1 {color:#105a9f; text-transform: uppercase; font-weight: 900; font-size: 35px;}
 h1 span {color: chocolate;}
 h2 {color:chocolate;}
 h3 {font-weight: 100; padding-top: 5px;}
-body {background-color: #fff;
-    /*background: linear-gradient(to top, rgba(243, 222, 130, 0.5), rgba(243,222,130,0.5)), url(../images/fon.jpg) no-repeat center center fixed;
-    background-size: cover;*/}
 #container {font-family: sans-serif; width: 100%;}
-#top {display: flex; text-align: center;background-color: #fff;}
+#top, #footer {display: flex; text-align: center;background-color: #fff;}
 #top-2 {display: flex; /*position: relative;*/ text-align: center;padding: 0px 50px;}
-.top-left {width: 30%; padding: 20px 0;} 
-.top-center {width: 40%; padding: 20px 0;}
-.top-right {width: 30%; padding: 20px 0;}
+.top-left, .footer-left {width: 30%; padding: 20px 0;} 
+.top-center, .footer-center {width: 40%; padding: 20px 0;}
+.top-right, .footer-right {width: 30%; padding: 20px 0;}
 .top-right p {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: chocolate;
+}
+.footer-right p {
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -21,17 +27,25 @@ body {background-color: #fff;
 .top-right p span {
     color:#105a9f;
 }
+.footer-right p span {
+    color:#105a9f;
+}
 #top-2 h2 {padding:20px 0;}
 #top-2 li {color: #105A9F;list-style-type: none;}
-.content-left, .content-center-1, .content-center-2, .content-right {width: 25%; border-top:1px solid #605756;border-left:1px solid #605756;border-bottom: 1px solid #605756;
-    padding:0 29px;}
-.content-right {border: 1px solid #605756;}
+.content-left, .content-center-1, .content-center-2, .content-right {width: 25%; padding:0 29px;}
+.content-left:hover, .content-center-1:hover, .content-center-2:hover, .content-right:hover {
+    outline: 1px solid #c7c7c7; border-radius: 5px; 
+    box-shadow: 0 0 0 1px silver,
+    0 -20px 0 -10px coral,
+    20px 0 0 -10px darkturquoise,
+    0 20px 0 -10px gold,
+    -20px 0 0 -10px green;}    
 .uslugi {text-align: center; padding: 35px 0;}
 /*СПИСКИ*/
 .border {
     list-style: none;
     padding: 0;
-    }
+}
     .border li {
     font-family: "Trebuchet MS", "Lucida Sans";
     padding: 7px 20px;
@@ -45,27 +59,24 @@ body {background-color: #fff;
     font-size: 20px;
     letter-spacing: 2px;
     transition: 0.3s all linear;
-    }
-    .border li:nth-child(2){border-color: #8bc63e;}
-    .border li:nth-child(3){border-color: #fcba30;}
-    .border li:nth-child(4){border-color: #1ccfc9;}
-    .border li:nth-child(5){border-color: #493224;}
-    .border li:hover {border-left: 10px solid transparent;}
-    .border li:nth-child(1):hover {border-right: 10px solid #f05d22;}
-    .border li:nth-child(2):hover {border-right: 10px solid #8bc63e;}
-    .border li:nth-child(3):hover {border-right: 10px solid #fcba30;}
-    .border li:nth-child(4):hover {border-right: 10px solid #1ccfc9;}
-    .border li:nth-child(5):hover {border-right: 10px solid #493224;}
+}
+.border li:nth-child(2){border-color: #8bc63e;}
+.border li:nth-child(3){border-color: #fcba30;}
+.border li:nth-child(4){border-color: #1ccfc9;}
+.border li:nth-child(5){border-color: #493224;}
+.border li:hover {border-left: 10px solid transparent;}
+.border li:nth-child(1):hover {border-right: 10px solid #f05d22;}
+.border li:nth-child(2):hover {border-right: 10px solid #8bc63e;}
+.border li:nth-child(3):hover {border-right: 10px solid #fcba30;}
+.border li:nth-child(4):hover {border-right: 10px solid #1ccfc9;}
+.border li:nth-child(5):hover {border-right: 10px solid #493224;}
 /*СПИСКИ*/    
 /*======================================*/
 * {
     box-sizing: border-box;
  }
- .forma {
-    position: absolute;
-    right: 215px;
-}
- .postcard {
+  /*.forma {}*/
+.postcard {
     max-width: 350px;
     margin: 50px auto 0;
     padding: 20px;
@@ -74,15 +85,15 @@ body {background-color: #fff;
     border-image: 10 repeating-linear-gradient(135deg, #105A9F, #105A9F 10px, transparent 10px, transparent 20px, #D2691e 20px, #D2691e 30px, transparent 30px, transparent 40px);
     font-family: 'Playfair Display';
     color: #605756;
- }
- .form-row {
+}
+.form-row {
     margin-bottom: 15px;
- }
- .form-row-3 {
-     margin-bottom: 15px;
-     text-align: center;
- }
- .form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
+}
+.form-row-3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
     width: 100%;
     padding: 0 10px;
     line-height: 35px;
@@ -91,13 +102,13 @@ body {background-color: #fff;
     border: 1px solid chocolate;
     background-size: 8px 35px;
     font-family: 'Playfair Display';
- }
- .form-row textarea {
+}
+.form-row textarea {
     background-attachment: local;
     background-repeat: repeat;
     resize: none;
- }
- .form-row-3 input[type="submit"] {
+}
+.form-row-3 input[type="submit"] {
     padding: 10px 20px;
     margin-top: 10px;
     background: #ff8229;
@@ -110,8 +121,41 @@ body {background-color: #fff;
     color: #fffdee;
     text-transform: uppercase;
     transition: 1s cubic-bezier(.165, .84, .44, 1);
- }
- .form-row input[type=submit]:hover {
+}
+.form-row input[type=submit]:hover {
     background: #C42061;
- }
+}
  /*===================================================*/
+.price{
+    padding: 20px 0;
+    font-size: 20px;
+    background-color: #5ca4e7;
+    margin-top: 30px;
+    color: white;
+    font-weight: 600;
+}
+.button{
+    margin: 20px 0;
+    background: rgb(212,75,56); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+} 
+.button a {
+    font-size: 20px;
+    font-weight: 600; 
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+}    
+a.button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+a.button:active { background: rgb(152,15,0); } /* при нажатии */
+.content-top {height:435px; background: linear-gradient(to top, rgba(243, 222, 130, 0.5), rgba(243,222,130,0.5)), url(../images/fon.jpg) no-repeat center center fixed;
+    background-size: cover; border:1px solid red; margin: 35px 0 10px 0;}
+.postcard p {
+    line-height: 1.5;
+    text-align: center;
+    color: chocolate;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 5px 0 20px 0;
+}  
